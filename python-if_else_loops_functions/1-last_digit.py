@@ -3,10 +3,10 @@ import random
 number = random.randint(-10000, 10000)
 
 # verify if number is negative
-if number > 0:
-    lastdigit = number % 10
-else:
+if number < 0:
     lastdigit = number % (-10)
+else:
+    lastdigit = number % 10
 
 # Check condition and print
 if lastdigit > 5:
