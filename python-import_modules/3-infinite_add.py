@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-if __name__== "__main__":
+if __name__ == "__main__":
     import sys
     resultat = 0
 
@@ -8,4 +8,3 @@ if __name__== "__main__":
             resultat += int(sys.argv[index])
 
 print("{:d}".format(resultat))
-
