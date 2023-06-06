@@ -5,4 +5,3 @@ def best_score(a_dictionary):
 
     max_pair = max(a_dictionary.items(), key=lambda x: x[1])
     return max_pair[0]
-
