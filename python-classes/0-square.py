@@ -5,4 +5,5 @@ Module 0-square
 
 
 class Square:
+    """class that defines a square."""
     pass
