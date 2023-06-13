@@ -3,6 +3,12 @@
 
 
 def add_integer(a, b=98):
+    """
+    Addition two var
+    Verify is they are int or float
+    If they are float, convert in interger
+    """
+
     # Check if a is an integer or float
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
