@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Defines an integer addition function."""
+
 
 def add_integer(a, b=98):
     # Check if a is an integer or float
@@ -15,7 +17,5 @@ def add_integer(a, b=98):
     if isinstance(b, float):
         b = int(b)
 
-    # Perform the addition and return the result
+    # Return the integer addition of a and b.
     return int(a + b)
-
-
