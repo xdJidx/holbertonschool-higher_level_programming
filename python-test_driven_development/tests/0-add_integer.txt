@@ -11,6 +11,12 @@ The second argument is optional - by default, it is 98.
 >>> add_integer(2)
 100
 
+>>> add_integer(1.0, 2.0)
+3
+
+>>> add_integer(0.3, 6)
+6
+
 >>> add_integer(-2, -2)
 -4
 
@@ -44,6 +50,6 @@ OverflowError: cannot convert float infinity to integer
 Traceback (most recent call last):
 TypeError: a must be an integer
 
- >>> add_integer(float('nan'))
+>>> add_integer(float('nan'))
 Traceback (most recent call last):
 ValueError: cannot convert float NaN to integer
