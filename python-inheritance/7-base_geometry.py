@@ -6,11 +6,10 @@ Defines an empty class BaseGeometry.
 
 
 class BaseGeometry:
-    """Define an area"""
+    """Reprsent base geometry."""
 
     def area(self):
         """Only raise an Exception"""
-
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
@@ -21,9 +20,12 @@ class BaseGeometry:
         Args:
             -name: always string, the name of Geometry.
             -value: interger to ckeck
+        Raises:
+            TypeError: If value is not an integer.
+            ValueError: If value is <= 0.
         """
 
-        if not isinstance(value, int):
+        if type(value) != int:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
