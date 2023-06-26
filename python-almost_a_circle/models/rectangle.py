@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-0-main
+1-main
 """
 
 
@@ -8,7 +8,19 @@ from models.base import Base
 
 
 class Rectangle(Base):
+    """Define Rectangle
+
+    """
     def __init__(self, width, height, x=0, y=0, id=None):
+        """Characteristic of Rectangle
+
+        Args:
+            width (int): width of Rectangle
+            height (int): height of Rectangle
+            x (int, optional): number of #. Defaults to 0.
+            y (int, optional): number of #. Defaults to 0.
+            id (_type_, optional): number of Rectangle. Defaults to None.
+        """
         super().__init__(id)
         self.width = width
         self.height = height
