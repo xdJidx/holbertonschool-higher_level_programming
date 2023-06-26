@@ -91,3 +91,9 @@ class Rectangle(Base):
         """
         for _ in range(self.height):
             print('#' * self.width)
+
+    def __str__(self) -> str:
+        string = "[Rectangle] " + "(" + str(self.id) + ") "
+        string += str(self.__x) + "/" + str(self.y) + " - "
+        string += str(self.__width) + "/" + str(self.__height)
+        return string
