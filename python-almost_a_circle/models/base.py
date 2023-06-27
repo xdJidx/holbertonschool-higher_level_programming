@@ -33,8 +33,7 @@ class Base:
         Returns:
             dictionnary: Return jason string dictionary
         """
-        if list_dictionaries is None or len(list_dictionaries) == 0:
-            list_dictionaries = []
-            return list_dictionaries
+        if list_dictionaries is None or list_dictionaries is []:
+            return "[]"
         else:
             return json.dumps(list_dictionaries)
