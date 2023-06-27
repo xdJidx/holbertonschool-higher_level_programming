@@ -88,7 +88,8 @@ class Base:
         filename = cls.__name__ + ".json"
         try:
             with open(filename, 'r') as file:
-                data = json.load(file)
+                json_data = file.read()
+                data = cls.from_json_string(json_data)
                 instances = [cls.create(**instance) for instance in data]
                 return instances
         except FileNotFoundError:
