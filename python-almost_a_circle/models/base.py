@@ -45,14 +45,9 @@ class Base:
         Args:
                 list_objs (list): instance de Base
         """
-        filename = type(list_objs[0]).__name__ + ".json"
-        json_file = open(filename, "w")
-        if list_objs is None:
-            json.dump([], json_file)
-
-        if type(list_objs[0]).__name__ == "Rectangle":
-            new_dict = [item.to_dictionary() for item in list_objs]
-            json_string = cls.to_json_string(new_dict)
-            json.dump(new_dict, json_file)
-
-        json_file.close()
+        filename = cls.__name__ + ".json"
+        json_list = []
+        if list_objs is not None:
+            json_list = [obj.to_dictionary() for obj in list_objs]
+        with open(filename, 'w') as file:
+            file.write(cls.to_json_string(json_list))
