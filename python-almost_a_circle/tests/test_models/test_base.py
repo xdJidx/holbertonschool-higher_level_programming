@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # test_base.py
+# Brennan D Baraban <375@holbertonschool.com>
 """Defines unittests for base.py.
 
 Unittest classes:
@@ -400,6 +401,26 @@ class TestBase_load_from_file(unittest.TestCase):
     def test_load_from_file_more_than_one_arg(self):
         with self.assertRaises(TypeError):
             Base.load_from_file([], 1)
+
+
+class TestBase_save_to_file_csv(unittest.TestCase):
+    """Unittests for testing save_to_file_csv method of Base class."""
+
+    @classmethod
+    def tearDown(self):
+        """Delete any created files."""
+        try:
+            os.remove("Rectangle.csv")
+        except IOError:
+            pass
+        try:
+            os.remove("Square.csv")
+        except IOError:
+            pass
+        try:
+            os.remove("Base.csv")
+        except IOError:
+            pass
 
 if __name__ == "__main__":
     unittest.main()
