@@ -168,3 +168,28 @@ use in your terminal this line
 ```
 cat 11-best_score.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
 ```
+
+12. Cheating is bad
+Write a script that updates the score of Bob to 10 in the table second_table.
+- You are not allowed to use Bob’s id value, only the name field
+- The database name will be passed as an argument of the mysql command
+```
+-- script that updates the score of Bob to 10 in the table second_table.
+UPDATE second_table SET score = 10 WHERE name = 'Bob'
+```
+use in your terminal this line
+```
+cat 12-no_cheating.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+```
+
+13. Score too low
+Write a script that removes all records with a score <= 5 in the table second_table of the database hbtn_0c_0 in your MySQL server.
+- The database name will be passed as an argument of the mysql command
+```
+-- script that removes all records with a score <= 5 in the table second_table
+DELETE FROM second_table WHERE score <= 5;
+```
+use in your terminal this line
+```
+cat 13-change_class.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+```
