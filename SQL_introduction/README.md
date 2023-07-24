@@ -62,3 +62,16 @@ use in your terminal this line
 ```
 cat 4-first_table.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
 ```
+
+5. Full description<br>
+Write a script that prints the full description of the table first_table from the database hbtn_0c_0 in your MySQL server.
+- The database name will be passed as an argument of the mysql command
+- You are not allowed to use the DESCRIBE or EXPLAIN statements
+```
+-- script that prints the full description of the table first_table from the database hbtn_0c_0
+SHOW CREATE TABLE first_table
+```
+use in your terminal this line
+```
+cat 5-full_table.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+```
