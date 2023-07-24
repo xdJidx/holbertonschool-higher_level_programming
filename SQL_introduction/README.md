@@ -88,3 +88,18 @@ use in your terminal this line
 ```
 cat 6-list_values.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
 ```
+
+7. First add<br>
+Write a script that inserts a new row in the table first_table (database hbtn_0c_0) in your MySQL server.
+- New row:<br>
+    id = 89<br>
+    name = Best School<br>
+- The database name will be passed as an argument of the mysql command
+```
+-- script that lists all rows of the table first_table from the database hbtn_0c_0
+SELECT * FROM first_table
+```
+use in your terminal this line
+```
+cat 7-insert_value.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+```
