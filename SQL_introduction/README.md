@@ -155,7 +155,7 @@ use in your terminal this line
 cat 10-top_score.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
 ```
 
-11. Select the best
+11. Select the best<br>
 Write a script that lists all records with a score >= 10 in the table second_table of the database hbtn_0c_0 in your MySQL server.
 - Results should display both the score and the name (in this order)
 - Records should be ordered by score (top first)
@@ -169,7 +169,7 @@ use in your terminal this line
 cat 11-best_score.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
 ```
 
-12. Cheating is bad
+12. Cheating is bad<br>
 Write a script that updates the score of Bob to 10 in the table second_table.
 - You are not allowed to use Bob’s id value, only the name field
 - The database name will be passed as an argument of the mysql command
@@ -182,7 +182,7 @@ use in your terminal this line
 cat 12-no_cheating.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
 ```
 
-13. Score too low
+13. Score too low<br>
 Write a script that removes all records with a score <= 5 in the table second_table of the database hbtn_0c_0 in your MySQL server.
 - The database name will be passed as an argument of the mysql command
 ```
@@ -194,7 +194,7 @@ use in your terminal this line
 cat 13-change_class.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
 ```
 
-14. Average
+14. Average<br>
 Write a script that computes the score average of all records in the table second_table of the database hbtn_0c_0 in your MySQL server.
 - The result column name should be average
 - The database name will be passed as an argument of the mysql command
@@ -205,4 +205,23 @@ SELECT AVG(score) AS average FROM second_table;
 use in your terminal this line
 ```
 cat 14-average.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+```
+
+15. Number by score<br>
+Write a script that lists the number of records with the same score in the table second_table of the database hbtn_0c_0 in your MySQL server.
+- The result should display:<br>
+    the score<br>
+    the number of records for this score with the label number
+- The list should be sorted by the number of records (descending)
+- The database name will be passed as an argument to the mysql command
+```
+-- script that lists the number of records with the same score in the table second_table
+SELECT score, COUNT(*) AS number
+FROM second_table
+GROUP BY score
+ORDER BY number DESC;
+```
+use in your terminal this line
+```
+cat 15-groups.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
 ```
