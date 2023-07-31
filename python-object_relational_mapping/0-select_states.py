@@ -2,6 +2,7 @@
 import mysql.connector as MySQLdb
 import sys
 
+
 def list_states(username, password, database):
     try:
         # Connect to MySQL server running on localhost at standard port 3306
@@ -12,7 +13,8 @@ def list_states(username, password, database):
         # Create a cursor to interact with the database
         cursor = connection.cursor()
 
-        # Execute the SQL query to retrieve all distinct states sorted by id in ascending order
+        # Execute the SQL query to retrieve
+        # all distinct states sorted by id in ascending order
         cursor.execute("SELECT DISTINCT * FROM states ORDER BY id ASC;")
 
         # Use a set to store the names encountered
@@ -37,9 +39,11 @@ def list_states(username, password, database):
         print(f"Error connecting to MySQL: {e}")
         sys.exit(1)
 
+
 if __name__ == "__main__":
     if len(sys.argv) != 4:
-        print("Usage: ./0-select_states.py <mysql_username> <mysql_password> <database_name>")
+        print("Usage: ./0-select_states.py <mysql_username>"
+              + " <mysql_password> <database_name>")
         sys.exit(1)
 
     # Get the arguments from the command line
