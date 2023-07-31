@@ -10,7 +10,9 @@ import sys
 
 if __name__ == "__main__":
     if len(sys.argv) != 5:
-        print("Usage: ./2-my_filter_states.py <mysql_username> <mysql_password> <database_name> <state_name>")
+        print(
+            "Usage: ./2-my_filter_states.py <mysql_username>"
+            + "<mysql_password> <database_name> <state_name>")
         sys.exit(1)
 
     mysql_username = sys.argv[1]
@@ -18,11 +20,14 @@ if __name__ == "__main__":
     database_name = sys.argv[3]
     state_name = sys.argv[4]
 
-    db = MySQLdb.connect(host='localhost', port=3306, user=mysql_username, passwd=mysql_password, db=database_name)
+    db = MySQLdb.connect(
+        host='localhost', port=3306, user=mysql_username,
+        passwd=mysql_password, db=database_name)
     cursor = db.cursor()
 
     # Exécuter la requête pour récupérer l'État en fonction du nom fourni
-    cursor.execute("SELECT * FROM `states` WHERE name=%s ORDER BY id ASC", (state_name,))
+    cursor.execute(
+        "SELECT * FROM `states` WHERE name=%s ORDER BY id ASC", (state_name,))
     [print(state) for state in cursor.fetchall()]
 
     cursor.close()
