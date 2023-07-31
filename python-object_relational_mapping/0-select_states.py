@@ -17,19 +17,13 @@ def list_states(username, password, database):
         # all distinct states sorted by id in ascending order
         cursor.execute("SELECT DISTINCT * FROM states ORDER BY id ASC;")
 
-        # Use a set to store the names encountered
-        seen_names = set()
-
         # Fetch all rows from the result set
         states = cursor.fetchall()
 
         # Display the results as specified in the example
         for state in states:
             state_id, state_name = state
-            # Check if the name is already in the set
-            if state_name not in seen_names:
-                seen_names.add(state_name)
-                print(state)
+            print(state)
 
         # Close the cursor and connection
         cursor.close()
