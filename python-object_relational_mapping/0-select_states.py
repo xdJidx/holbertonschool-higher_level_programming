@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import mysql.connector as MySQLdb
+import MySQLdb
 import sys
 
 
