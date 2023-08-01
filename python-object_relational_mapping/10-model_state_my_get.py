@@ -25,7 +25,7 @@ if __name__ == "__main__":
     # Search for the State object with the given name
     state_name_to_search = sys.argv[4]
     state = session.query(State) \
-    .filter(State.name == state_name_to_search).first()
+        .filter(State.name == state_name_to_search).first()
 
     # Display the results
     if state is None:
