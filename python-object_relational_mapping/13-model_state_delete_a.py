@@ -24,7 +24,7 @@ if __name__ == "__main__":
     # Retrieve all State objects with a name containing the letter 'a'
     for state in session.query(State).order_by(State.id):
         if "a" in state.name:
-                session.delete(state)
+            session.delete(state)
 
     # Commit the changes to the database
     session.commit()
