@@ -23,7 +23,8 @@ if __name__ == "__main__":
 
     # Retrieve the State object with id = 2
     state_id_to_update = 2
-    state_to_update = session.query(State).filter_by(id=state_id_to_update).first()
+    state_to_update = session.query(State) \
+        .filter_by(id=state_id_to_update).first()
 
     # Check if the State object exists
     if state_to_update is None:
