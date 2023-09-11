@@ -141,3 +141,22 @@ Etape 1 : Définir les variables ainsi que l'url
 Etape 2 : Utiliser fetch() dans un premier temps pour vérifier que la réponse est bien reçu puis récupérer la donnée dans un format .json.
 
 ### 7. Star Wars movies
+On retourne la liste des films d'une url donnée.
+Toujours dans fetch :
+```
+.then((data) => {
+    // Extract movie titles from the data
+    const movies = data.results;
+
+    // Iterate through the movies and add them to the list
+    movies.forEach((movie) => {
+      const title = movie.title;
+      const listItem = document.createElement("li");
+      listItem.textContent = title;
+      movieList.appendChild(listItem);
+    });
+})
+```
+Le retour est dynamique et ajoutera d'autre titres qui viendraient s'ajouter dans cette base de donnée.
+
+### 8. Say Hello!
