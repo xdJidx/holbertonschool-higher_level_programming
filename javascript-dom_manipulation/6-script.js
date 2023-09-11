@@ -1,8 +1,8 @@
 // Get a reference to the element with id "character"
-const characterElement = document.getElementById("character");
+const characterElement = document.getElementById('character');
 
 // URL of the API endpoint
-const apiUrl = "https://swapi-api.hbtn.io/api/people/5/?format=json";
+const apiUrl = 'https://swapi-api.hbtn.io/api/people/5/?format=json';
 
 // Use the Fetch API to make a GET request to the API endpoint
 fetch(apiUrl)
@@ -12,7 +12,7 @@ fetch(apiUrl)
       // Parse the JSON response
       return response.json();
     } else {
-      throw new Error("Failed to fetch character data");
+      throw new Error('Failed to fetch character data');
     }
   })
   .then((data) => {
@@ -23,5 +23,5 @@ fetch(apiUrl)
     characterElement.textContent = characterName;
   })
   .catch((error) => {
-    console.error("Error:", error);
+    console.error('Error:', error);
   });
