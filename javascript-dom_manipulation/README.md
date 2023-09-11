@@ -94,3 +94,14 @@ addItem.addEventListener('click', function () {
 ```
 
 5. Change the text<br>
+Changer un text en appuyant sur un text, le concept reste le même. Déclaré les variables :
+```
+const header = document.querySelector('header');
+const updateHeader = document.getElementById('update_header');
+```
+Changer l'élément avec l'option .textContent :
+```
+updateHeader.addEventListener('click', function () {
+  header.textContent = 'New Header!!!';
+});
+```
